@@ -1,6 +1,6 @@
 # BC-TA
 Technologies Blockchain
 
-Projet porté par Maryline LAURENT - TSP
+TEAM Leaders: Maryline LAURENT & Montassar-Bellah NAGHMOUCHI [Telecom-Sud Paris](https://www.telecom-sudparis.eu/)
 
 L’objectif est d’automatiser le processus d’accès à ces jeux de données, et ce sous la condition que les chercheurs signent un engagement du bon usage de ces données, et ce en employant la blockchain.
