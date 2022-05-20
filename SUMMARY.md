@@ -7,6 +7,7 @@
   * [L'identification avec la Blockchain](bc-ta/lidentification-avec-la-blockchain.md)
   * [Architecture du système](bc-ta/architecture-du-systeme.md)
   * [Potentiels](bc-ta/potentiels.md)
+  * [Page 1](bc-ta/page-1.md)
   * [labs](BC-TA/labs/README.md)
     * [deploySmartContract](BC-TA/labs/deploysmartcontract.md)
 * [Running the test network](test-network/README.md)
