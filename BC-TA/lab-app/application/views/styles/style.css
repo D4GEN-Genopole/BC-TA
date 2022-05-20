@@ -1,0 +1,93 @@
+.page-footer {
+    margin-top: auto;
+    background-color: rgba(24, 24, 24, 0.116);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+.content-margin {
+    margin: 30px auto;
+}
+
+.datasets {
+    padding: 10px auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.dataset {
+    color: inherit;
+    box-shadow: 1px 2px 3px rgba(59, 59, 59, 0.336);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+}
+
+.dataset p {
+    margin: 5px 0;
+}
+.dataset .img-container {
+    overflow: hidden;
+    max-width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dataset .img-container img {
+    object-position: center center;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+}
+.dataset h6 {
+    font-weight: bold;
+}
+
+.dataset .infos {
+    margin-top: auto;
+}
+
+.terms-of-use {
+    display: flex;
+    flex-direction: column;
+}
+
+.terms-of-use button {
+    margin-top: 1.5rem;
+    margin-left: auto;
+}
+
+.terms-of-use .checkbox {
+
+    display:block;
+    padding: 1em;
+    
+    border: 3px solid #ddd;
+    background-color: #eee;
+}
+
+.terms-of-use .text {
+    border: 1px solid #ddd;
+    box-shadow: 1px 2px 3px rgba(104, 104, 104, 0.226);
+    padding: 2rem;
+    height: 500px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+.terms-of-use #checkbox {
+    height: 2em;
+    width: 2em;
+    vertical-align: middle;
+}

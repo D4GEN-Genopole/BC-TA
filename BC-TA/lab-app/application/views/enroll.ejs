@@ -1,0 +1,40 @@
+<%- include('./partials/header', { title: 'User Registration' }) -%> 
+
+<%- include('./partials/forms/header', { formtitle: 'User Registration'} )-%> 
+<% if (locals.errorMessage != null){ %>
+  <p style="color: red;"><%= errorMessage %></p>
+<% } %>
+
+            <p>Register using your username and lab ID:</p>
+            <form method="post" action="/enroll">
+              <p>
+                <input placeholder="username" type="text" name="username" required>
+              </p>
+              <p>
+                <input placeholder="lab id" type="text" name="labid" required>
+              </p>
+              <p> Choose your Membership Service Provider : </p>
+              <p>
+                <label>
+                  <input name="ca" type="radio" value ='ca1' checked />
+                  <span>Lab1</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input name="ca" type="radio" value ='ca2' />
+                  <span>Lab2</span>
+                </label>
+              </p>
+                </label>
+              </p>
+              
+              <button class="btn waves-effect waves-light black" type="submit"><i class="material-icons left">how_to_reg</i>Register user</button>
+              </p>
+            </form>
+        </div>
+        <div class="card-action"></div>
+        <p>Already have an account? <a href="/login">Login</a> </p>
+          </div>
+<%- include('./partials/forms/footer') -%>
+<%- include('./partials/footer') -%>
