@@ -27,3 +27,6 @@ Do these steps for each peer. After the majority/all peers agreee and approve th
 # commit and deploy chaincode on peers
 
 peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --peerAddresses localhost:7051 --tlsRootCertFiles ${PEER0_ORG1_CA} --peerAddresses localhost:9051 --tlsRootCertFiles ${PEER0_ORG2_CA} --channelID mychannel --name application -v 0 --sequence j --tls --cafile $ORDERER_CA --waitForEvent
+
+  
+  Little add
