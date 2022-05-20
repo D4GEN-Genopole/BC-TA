@@ -19,7 +19,7 @@ body {
 }
 
 .datasets {
-    padding: 10px auto;
+    margin: 2rem auto;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(3, 1fr);
