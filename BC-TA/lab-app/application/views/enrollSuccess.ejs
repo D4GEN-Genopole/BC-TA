@@ -1,7 +1,7 @@
 <%- include('./partials/header', { title: 'User Registred' }) -%> 
+<%- include('./partials/nav') -%> 
 
 <%- include('./partials/forms/header', { formtitle: 'User Registration Response'} )-%>
-<form method="post" action="/dataAccess">
 
 <p>User   <div class="divider"></div><%- username %></p>
 <div class="divider"></div>
@@ -11,9 +11,9 @@
 <div class="divider"></div>
 <p>Public Key   <div class="divider"></div><%- pubKey %></p>
 <p> Refer to your identity wallet for the full certificate.</p>
-<button type="submit" class="btn waves-effect waves-light black"><i class="material-icons left">data_usage</i>Access genomics data</button>
+<a href="/sign" class="btn waves-effect waves-light black"><i class="material-icons left">data_usage</i>Access genomics data</a>
 
 </form>
 <%- include('./partials/forms/footer') -%>
 
-<%- include('./partials/footer') -%>
+<%- include('./partials/footer', { color: '' }) -%>

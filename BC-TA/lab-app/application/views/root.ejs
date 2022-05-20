@@ -1,9 +1,14 @@
 <%- include('./partials/header', { title: 'BC-TA' }) -%> 
 
-<div class="homepage container content-margin">
-   <p>BC-TA</p> 
-    <a class="TheButton" href="/enroll"> Register </a>
-    <a class="'Second Button" href="/dataAccess">Access data</a> 
+<div class="homepage container content-padding">
+    <h1>BC-TA</h1> 
+    <h3 class="teal-text">La blockchain pour un accès autorisé et traçable à des données</h3> 
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> 
+    <div class="links">
+        <a class="btn btn-register waves-effect waves-light btn" href="/enroll"> Register </a>
+        <a class="btn btn-access waves-effect waves-light btn" href="/dataAccess">Access data</a>  
+    </div>
+    
 </div>
 
-<%- include('./partials/footer') -%>
+<%- include('./partials/footer', { color: 'teal lighten-4' }) -%>
