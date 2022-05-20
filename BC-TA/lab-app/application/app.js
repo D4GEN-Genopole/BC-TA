@@ -8,6 +8,7 @@ const app = express();
 const authRoutes = require('./routes/authRoutes');
 const listenerRoutes = require('./routes/listnerRoutes');
 const signRoute = require('./routes/signRoute');
+const dataAccessRoute = require('./routes/dataAccessRoute');
 
 // middleware
 app.use(express.static('public'));
@@ -19,6 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(authRoutes);
 app.use(listenerRoutes);
 app.use(signRoute);
+app.use(dataAccessRoute);
 
 
 app.use(function(req, res, next) {

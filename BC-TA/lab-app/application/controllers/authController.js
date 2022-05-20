@@ -56,49 +56,10 @@ module.exports.root_get = (req, res) => {
     res.render('root');
 }
 
-module.exports.login_get = (req, res) => {
-    res.render('login');
-}
-
 module.exports.enroll_get = (req, res) => {
     res.render('enroll');
 }
 
-// module.exports.form_get = (req, res) => {
-//    res.render('form')
-// }
-
-// POST
-
-module.exports.login_post = async (req, res) => {
-
-    try{
-        // console.log(req.body);
-        // passport.authenticate('local', function(err, user, info){
-        //     var token;
-        //     if (err){
-        //         res.status(404).json(err);
-        //         return;
-        //     }
-        //     if (user){
-        //         token = user.generateJWT();
-        //         res.status(200);
-        //         res.json({"token":token});
-        //         res.send(token);
-
-        //     } else {
-        //         res.status(401).json(info);
-        //     }
-        // });
-        res.render('loginT');
-
-    }
-    catch(error){
-        res.render('login',{errorMessage:"Failed to login user. Try again."});
-        console.error(`Failed to connect user : ${error}`);
-        process.exit(1);
-    }
-}
 
 module.exports.enroll_post = async (req, res) => {
 
@@ -108,13 +69,14 @@ module.exports.enroll_post = async (req, res) => {
         if (req.body.ca == 'ca1'){
             let enrollment = await enrollUser(req.body.username,'ca.org1.example.com','Org1MSP','../../labs/lab1/gateway/connection-org1.yaml');
             console.log(enrollment);
-            res.render('enrollT',{username:req.body.username, labid:req.body.labid,msp:enrollment.mspId,pubKey:enrollment.credentialscertificate});
+            res.render('enrollSuccess',{username:req.body.username, labid:req.body.labid,msp:enrollment.mspId,pubKey:enrollment.credentialscertificate});
                 }
 
         if (req.body.ca == 'ca2'){
             let enrollment = await enrollUser(req.body.username,'ca.org2.example.com','Org2MSP','../../labs/lab2/gateway/connection-org2.yaml');
             console.log(enrollment);
-            res.render('enrollT',{username:req.body.username, labid:req.body.labid,msp:enrollment.mspId,pubKey:enrollment.credentials.certificate});
+            const message = 'test';
+            res.render('enrollSuccess',{username:req.body.username, labid:req.body.labid,msp:enrollment.mspId,pubKey:enrollment.credentials.certificate,message:message});
         }        
 
     }catch(error){
