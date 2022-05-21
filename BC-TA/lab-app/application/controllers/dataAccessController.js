@@ -90,7 +90,13 @@ module.exports.data_access_get = (req, res) => {
 module.exports.data_access_post = async (req, res) => {
     // function to invoke authorization sc => authdec
     let authdec = '';
-    let state = await getResearcherState('monta','0001234');
+
+    // bad ID example
+
+    // let state = await getResearcherState('monta','0001234');
+
+    // good id
+    let state = await getResearcherState('monta','1234');
     //let auth = await getAuthDec('monta','1234');
     //console.log(auth);
     console.log(state);
