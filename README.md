@@ -6,6 +6,8 @@ TEAM Members: Adrien DUBOIS, Erwan LE BLEVEC & Margot RAMASY.
 
 L’objectif est d’automatiser le processus d’accès à ces jeux de données, et ce sous la condition que les chercheurs signent un engagement du bon usage de ces données, et ce en employant la blockchain.
 
+![](.gitbook/assets/D4GEN\_agenda\_sansdate.png)
+
 ## Introduction au projet
 
 {% content-ref url="bc-ta/documentation/introduction-a-la-blockchain.md" %}
