@@ -6,7 +6,7 @@
 <div class="container content-margin">
     <h5>Access a genomics dataset</h5>
     <div class="datasets">
-        <a href="/sign" class="dataset">
+        <a href="/sign" class="dataset grey lighten-4">
             <h6>'Candidatus Kapabacteria' thiocyanatum</h6>
             <div class="img-container">
               <img src="images/set1.png" alt="set1" />
@@ -17,7 +17,7 @@
               <p>Date : 05/09/2022</p>
             </div>
         </a>
-        <a href="/sign" class="dataset">
+        <a href="/sign" class="dataset grey lighten-4">
           <h6>Escherichia coli</h6>
           <div class="img-container">
             <img src="images/set2.jpg" alt="dataset2" />
@@ -35,17 +35,17 @@
 
 <% if (authdec == 'bad_id'){ %>  
     <div class="container content-margin">
-        <h5>Sorry, you cannot access data because you have a wrong ID.</h5>
+        <h5 class="red-text">Sorry, you cannot access data because you have a wrong ID.</h5>
         <p>You have to register again.</p>
-        <a class="btn waves-effect waves-light black" href="enroll">Enroll</a>
+        <a class="btn waves-effect waves-light teal" href="enroll">Enroll</a>
     </div>
 <% } %>
 
 <% if (authdec == 'not_signed'){ %>  
     <div class="container content-margin">
-        <h5>Sorry, you cannot access data because you did not sign the chart agreement yet.</h5>
+        <h5 class="red-text">Sorry, you cannot access data because you did not sign the chart agreement yet.</h5>
         <p>Please, sign the chart.</p>
-        <a class="btn waves-effect waves-light black" href="sign">Sign the chart</a>
+        <a class="btn waves-effect waves-light teal" href="sign">Sign the chart</a>
     </div>
 <% } %>
 

@@ -5,6 +5,7 @@ const router = Router();
 // GET
 
 router.get('/sign', signController.sign_get);
+router.post('/sign', signController.sign_post);
 
 // POST
 
