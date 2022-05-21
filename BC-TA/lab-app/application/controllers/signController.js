@@ -27,9 +27,10 @@ async function signForm(researcherName,labid){
         const formSignContract = await network.getContract('application','formsignatureContract');
         console.log('got contract');
         const signResponse = await formSignContract.submitTransaction('signForm',researcherName,labid);
-        let latest = researcher.fromBuffer(signResponse[0]);
-        console.log(latest);
-        return latest;
+        console.log(signResponse);
+        let signedResearcher = researcher.fromBuffer(signResponse);
+        console.log(signedResearcher);
+        return signedResearcher;
 
 
 }catch(error){
@@ -46,6 +47,8 @@ async function signForm(researcherName,labid){
 module.exports.sign_get = (req, res) => {
     res.render('sign');
 }
+
+// POST
 
 module.exports.sign_post = async (req, res) => {
     let signature = await signForm('monta','1234');

@@ -1,0 +1,16 @@
+<%- include('./partials/header', { title: 'Blockchain Listener' }) -%> 
+<%- include('./partials/nav') -%> 
+<%- include('./partials/forms/header', { formtitle: 'Blockchain Monitor'} )-%> 
+
+    <h2>Listen to Blockchain events</h2>
+    Click on the button to monitor all blockchain events.
+    <form method="post" action="/listen">
+
+
+        <input class="btn waves-effect waves-light pulse yellow" type="submit" value="Listen">
+        <a href="/" class="btn btn-primary">Cancel</a>
+
+      </p>
+    </form>
+<%- include('./partials/forms/footer') -%>
+<%- include('./partials/footer', { color: '' }) -%>

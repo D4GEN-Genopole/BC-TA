@@ -8,7 +8,6 @@
           <th>Block Number</th>
           <th>TxID</th>
           <th>Timestamp</th>
-          <th>Invoked Function</th>
           <th>Updated Item</th>
           <th>Endorser</th>
 
@@ -21,9 +20,8 @@
             <td><%- blockdata[i].Block %></td>
             <td><%- blockdata[i].TxID.slice(0,10) %>...<%- blockdata[i].TxID.slice(54,64) %></td>
             <td><%- blockdata[i].TxTimeStamp %></td>
-            <td><%- blockdata[i].TransactionData.split(' ')[1].slice(11,) %></td>
-            <td><%- blockdata[i].KeyUpdates.slice(26,) %></td>
-            <td><%- blockdata[i].Endorser.slice(11,15) %>, <%- blockdata[i].Endorser.slice(19,23) %></td>
+            <td><%- blockdata[i].KeyUpdates%></td>
+            <td><%- blockdata[i].Endorser %></td>
           </tr>
 
  <% } %>

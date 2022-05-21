@@ -6,12 +6,12 @@ const fs = require("fs");
 async function monitor(optionsType,firstBlock) {
     try {
         // Set up the wallet
-	const wallet = await Wallets.newFileSystemWallet('../identity/user/owner/wallet');
+	const wallet = await Wallets.newFileSystemWallet('../identity/user/test/wallet');
 
         // Create a new gateway for connecting to our peer node.
         const gateway = new Gateway();
         
-        const userName = 'owner';
+        const userName = 'test';
 
         // Load connection profile; will be used to locate a gateway
         let connectionProfile = yaml.safeLoad(fs.readFileSync('../../labs/lab2/gateway/connection-org2.yaml', 'utf8'));

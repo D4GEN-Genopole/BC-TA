@@ -34,6 +34,14 @@ class FormSignatureContract extends Contract {
 
         console.log('Instantiate the contract');
     }
+    async initResearcher(ctx,researcherName,labID){
+
+        let researcher = Researcher.createInstance(researcherName,labID);
+        researcher.setNotSigned();
+        await ctx.researcherStateList.addResearcherState(researcher);
+        return researcher;
+
+    }
     async signForm(ctx,researcherName,labID){
 
         let researcher = Researcher.createInstance(researcherName,labID);
@@ -43,10 +51,22 @@ class FormSignatureContract extends Contract {
 
     }
 
+    async authorizationDecision(ctx,researcherName,labID){
+
+        let ResearcherKey = Researcher.makeKey([researcherName,labID]);
+        let researcher = await ctx.researcherStateList.getResearcher(ResearcherKey);
+        if (researcher.isSigned()){
+            return "approve";
+        }
+        if (researcher.isNotSigned()){
+            return "no_signed";
+        }
+    }
+
     async getResearcherState(ctx,researcherName,labID){
 
         let query = new QueryUtils(ctx,'formsignature');
-        let results = await query.getResearcherState(researcherName,labID);
+        let results = await query.getResearcher(researcherName,labID);
         return results;
 
 
