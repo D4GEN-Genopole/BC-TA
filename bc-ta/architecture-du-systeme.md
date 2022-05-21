@@ -1,2 +1,0 @@
-# Architecture du système
-

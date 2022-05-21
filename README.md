@@ -8,8 +8,8 @@ L’objectif est d’automatiser le processus d’accès à ces jeux de données
 
 ## Introduction au projet
 
-{% content-ref url="BC-TA/introduction-a-la-blockchain.md" %}
-[introduction-a-la-blockchain.md](BC-TA/introduction-a-la-blockchain.md)
+{% content-ref url="bc-ta/documentation/introduction-a-la-blockchain.md" %}
+[introduction-a-la-blockchain.md](bc-ta/documentation/introduction-a-la-blockchain.md)
 {% endcontent-ref %}
 
 ## Basic test network launching
